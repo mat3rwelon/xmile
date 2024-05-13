@@ -1,0 +1,43 @@
+{
+	"name": "xmile",
+	"version": "1.0.0",
+	"description": "PNG and SVG avatar generator with custom size and colors",
+	"main": "lib/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mat3rwelon/xmile.git"
+	},
+	"bugs": {
+		"url": "https://github.com/mat3rwelon/xmile/issues"
+	},
+	"homepage": "https://github.com/mat3rwelon/xmile#readme",
+	"keywords": [
+		"avatar"
+	],
+	"author": "Materwelon 🍉 <mat3rwelonsugar@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"rimraf": "^5.0.1",
+		"typedoc": "^0.24.8",
+		"typedoc-plugin-missing-exports": "^2.0.0",
+		"typescript": "^4.9.5"
+	},
+	"dependencies": {
+		"axios": "^1.6.8",
+		"cheerio": "^1.0.0-rc.12",
+		"file-type": "^16.5.4",
+		"form-data": "^4.0.0",
+		"imgbb-uploader": "^1.5.1"
+	},
+	"peerDependencies": {},
+	"peerDependenciesMeta": {},
+	"scripts": {
+		"watch": "tsc --watch",
+		"clean": "rimraf lib",
+		"build": "pnpm clean && tsc",
+		"example": "pnpm build && pnpm example:build && pnpm example:run",
+		"example:build": "tsc example/app.ts --esModuleInterop --skipLibCheck",
+		"example:run": "node example/app.js",
+		"build:docs": "rimraf docs && typedoc --options typedoc.json"
+	}
+}
