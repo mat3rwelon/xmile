@@ -1,6 +1,6 @@
 {
 	"name": "xmile",
-	"version": "1.0.3-rc02",
+	"version": "1.0.3-rc04",
 	"description": "PNG and SVG avatar generator with custom size and colors",
 	"main": "lib/index.js",
 	"repository": {
